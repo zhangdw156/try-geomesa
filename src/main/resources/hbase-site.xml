@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+	<property>
+		<name>hbase.rootdir</name>
+		<value>hdfs://ds245:8020/hbase</value>
+	</property>
+        
+	<property>
+		<name>hbase.cluster.distributed</name>
+		<value>true</value>      
+	</property>
+        
+	<property>
+		<name>hbase.unsafe.stream.capability.enforce</name>
+		<value>false</value>      
+	</property>
+	
+	<property>
+		<name>hbase.zookeeper.quorum</name>
+		<value>ds245</value>
+	</property>
+	
+	<property>
+		<name>hbase.zookeeper.property.clientPort</name>
+		<value>2181</value>
+	</property>
+	
+	<property>
+		<name>hbase.tmp.dir</name>
+		<value>/data1/hbase-2.5.5/tmp</value>
+	</property>
+	
+	<property>
+		<!--使用本地目录-->
+		<name>hbase.zookeeper.property.dataDir</name>
+		<value>/data1/zookeeper-3.4.14/data</value>
+	</property>
+ 
+   <property>
+    <name>hbase.coprocessor.user.region.classes</name>
+    <value>org.locationtech.geomesa.hbase.rpc.coprocessor.GeoMesaCoprocessor</value>
+   </property>
+</configuration>
